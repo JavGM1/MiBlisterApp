@@ -1,0 +1,78 @@
+# Android Studio / Gradle
+*.iml
+.gradle/
+/local.properties
+/.idea/
+.DS_Store
+Thumbs.db
+
+# Build folders
+/build/
+**/build/
+
+# Captures and outputs
+/captures/
+
+# Native build
+.externalNativeBuild
+.cxx/
+
+# Signing keys
+*.jks
+*.keystore
+keystore.properties
+
+# Kotlin/Java
+*.class
+*.jar
+*.war
+*.ear
+
+# Gradle caches
+.gradle
+
+# IntelliJ
+/out/
+
+# Environment files
+.env
+.env.*
+
+# Misc
+*.log
+*.tmp
+
+# Android Studio specific (keep useful project files but ignore workspace/state)
+/.idea/workspace.xml
+/.idea/tasks.xml
+/.idea/dictionaries
+/.idea/assetWizardSettings.xml
+/.idea/navEditor.xml
+
+# Ignore local SDK or build system files
+.localhistory/
+
+# Avoid: do not ignore gradlew or gradle wrapper files
+!gradlew
+!gradlew.bat
+
+# Keep Android generated resource value files out
+/app/build/generated/
+
+# Keep distribution zips out
+*.zip
+*.aar
+
+# Ignore crashlytics / fabric generated files
+crashlytics.properties
+
+# User-specific files
+*.keystore
+*.properties
+
+# Avoid accidentally committing NDK intermediate files
+obj/
+*.so
+
+# If you add other secret files, list them here (example)
+# secrets.properties
