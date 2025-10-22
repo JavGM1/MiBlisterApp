@@ -37,6 +37,13 @@ android {
     buildFeatures {
         compose = true
     }
+
+    // Add legacy JNI packaging to avoid APKs with unaligned native LOAD segments
+    packaging {
+        jniLibs {
+            useLegacyPackaging = true
+        }
+    }
 }
 
 dependencies {
@@ -49,18 +56,22 @@ dependencies {
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
-    implementation("org.jsoup:jsoup:1.21.2")
-    implementation("com.squareup.okhttp3:okhttp:5.2.1")
-    implementation("androidx.biometric:biometric:1.4.0-alpha02")
-    implementation("androidx.navigation:navigation-compose:2.7.2")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2")
-    implementation("androidx.lifecycle:lifecycle-runtime-compose:2.6.2")
-    implementation("androidx.room:room-runtime:2.6.0")
-    implementation("androidx.room:room-ktx:2.6.0")
-    implementation("androidx.datastore:datastore-preferences:1.1.0-alpha05")
-    implementation("androidx.work:work-runtime-ktx:2.8.1")
-    implementation("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+
+    // use version catalog aliases for third-party and androidx libraries
+    implementation(libs.org.jsoup)
+    implementation(libs.com.squareup.okhttp3)
+    implementation(libs.androidx.biometric)
+    implementation(libs.androidx.navigation.compose)
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
+    implementation(libs.androidx.lifecycle.runtime.compose)
+    implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.room.ktx)
+    implementation(libs.androidx.datastore.preferences)
+    implementation(libs.androidx.work.runtime.ktx)
+    implementation(libs.com.squareup.retrofit2)
+    implementation(libs.com.squareup.retrofit2.converter.gson)
+    implementation(libs.androidx.compose.material.icons.extended)
+
 
 
     testImplementation(libs.junit)
